@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>EchoGrace — Coming Soon | Adrich App Studio</title>
+<meta name="description" content="EchoGrace — A gospel choir music app by Adrich App Studio. Coming soon." />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/sda-music-stream-48ea6.appspot.com/o/adrich_dp.png?alt=media&token=84f172db-1030-4489-a940-88a91f06d884" />
+<style>
+  :root {
+    --primary: #1db954;
+    --accent: #00ffb3;
+    --dark-bg: #0b0f0e;
+    --card: rgba(255,255,255,0.04);
+    --border: rgba(255,255,255,0.06);
+    --text-light: #e9e9e9;
+    --text-muted: #a7a7a7;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at 20% 20%, rgba(0,255,179,0.12), transparent 40%), 
+                linear-gradient(180deg, #0b0f0e 0%, #0b0b0b 100%);
+    color: var(--text-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 16px;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 960px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    padding: 40px;
+    backdrop-filter: blur(8px);
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1.5s ease;
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-align: left;
+  }
+
+  header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid var(--accent);
+    box-shadow: 0 0 16px rgba(0,255,179,0.3);
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .tagline {
+    margin-top: 4px;
+    font-size: 1rem;
+    color: var(--accent);
+    font-style: italic;
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  header p {
+    margin: 4px 0 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+
+  main {
+    margin-top: 32px;
+    text-align: center;
+  }
+
+  .headline h2 {
+    font-size: 2rem;
+    color: var(--accent);
+    margin: 0;
+  }
+
+  .headline p {
+    margin: 8px 0 0;
+    color: var(--text-muted);
+    font-size: 1rem;
+  }
+
+  .countdown {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin: 24px 0;
+    flex-wrap: wrap;
+  }
+
+  .countdown .box {
+    flex: 1;
+    min-width: 72px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    padding: 12px 0;
+    text-align: center;
+  }
+
+  .num {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  .lbl {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .chip {
+    background: rgba(0,255,179,0.1);
+    border: 1px solid rgba(0,255,179,0.2);
+    color: var(--text-light);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+  }
+
+  .cta {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+
+  .btn-primary {
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    color: #fff;
+  }
+
+  .btn-primary:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 20px rgba(0,255,179,0.25);
+  }
+
+  .btn-outline {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--text-light);
+  }
+
+  footer {
+    margin-top: 32px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-align: center;
+  }
+
+  footer a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 24px; }
+    header img { width: 64px; height: 64px; }
+    header h1 { font-size: 1.5rem; }
+    .headline h2 { font-size: 1.6rem; }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="https://firebasestorage.googleapis.com/v0/b/sda-music-stream-48ea6.appspot.com/o/echoGrace.png?alt=media&token=2c61fca7-8f63-4755-8c32-59797b42c37f" alt="EchoGrace Logo">
+      <div>
+        <h1>EchoGrace</h1>
+        <div class="tagline">“Where the Lord’s Grace Echoes”</div>
+        <p>A new gospel music app by Adrich App Studio</p>
+      </div>
+    </header>
+
+    <main>
+      <div class="headline">
+        <h2>Coming Soon 🎵</h2>
+        <p>All your choir songs, playlists, and lyrics — beautifully designed for believers.</p>
+      </div>
+
+      <div class="countdown" id="countdown">
+        <div class="box"><div class="num" id="days">00</div><div class="lbl">Days</div></div>
+        <div class="box"><div class="num" id="hours">00</div><div class="lbl">Hours</div></div>
+        <div class="box"><div class="num" id="mins">00</div><div class="lbl">Minutes</div></div>
+        <div class="box"><div class="num" id="secs">00</div><div class="lbl">Seconds</div></div>
+      </div>
+
+      <div id="launch-message" style="display:none;text-align:center;font-size:1.3rem;color:var(--primary);margin-top:12px;">
+        🎉 EchoGrace is Live! Download coming soon!
+      </div>
+
+      <div class="features">
+        <span class="chip">🎧 Offline Music</span>
+        <span class="chip">🎼 Choir Playlists</span>
+        <span class="chip">📜 Lyrics View</span>
+        <span class="chip">💚 Spirit-led Design</span>
+      </div>
+
+      <div class="cta">
+        <button class="btn btn-primary" onclick="alert('Thanks! You’ll be notified at launch.')">Join the Waitlist</button>
+        <button class="btn btn-outline" onclick="alert('Preview coming soon!')">Preview Screens</button>
+      </div>
+    </main>
+
+    <footer>
+      <p>Developed with 💚 by <a href="#">Adrich App Studio</a> | © <span id="year"></span> EchoGrace</p>
+    </footer>
+  </div>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ======= REAL COUNTDOWN =======
+    const launchDate = new Date("2025-11-10T00:00:00");
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const diff = launchDate.getTime() - now;
+
+      if (diff <= 0) {
+        document.getElementById("countdown").style.display = "none";
+        document.getElementById("launch-message").style.display = "block";
+        clearInterval(timer);
+        return;
+      }
+
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const m = Math.floor((diff / (1000 * 60)) % 60);
+      const s = Math.floor((diff / 1000) % 60);
+
+      document.getElementById("days").textContent = d.toString().padStart(2, '0');
+      document.getElementById("hours").textContent = h.toString().padStart(2, '0');
+      document.getElementById("mins").textContent = m.toString().padStart(2, '0');
+      document.getElementById("secs").textContent = s.toString().padStart(2, '0');
+    }
+
+    const timer = setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+</body>
+</html>
