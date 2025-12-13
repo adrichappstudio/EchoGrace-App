@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EchoGrace Privacy Policy</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #1db954;
+            --accent: #00ffb3;
+            --bg-dark: #0b0f0e;
+            --card: rgba(255, 255, 255, 0.05);
+            --border: rgba(255, 255, 255, 0.08);
+            --text: #e9e9e9;
+            --muted: #a7a7a7;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(0, 255, 179, 0.15), transparent 40%),
+                linear-gradient(180deg, #0b0f0e 0%, #070707 100%);
+            color: var(--text);
+            line-height: 1.8;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* 🌊 Ambient Worship Animation */
+        body::before,
+        body::after {
+            content: "";
+            position: fixed;
+            inset: -50%;
+            background: radial-gradient(circle, rgba(0, 255, 179, 0.12), transparent 60%);
+            animation: floatWorship 50s linear infinite;
+            z-index: -2;
+        }
+
+        body::after {
+            animation-duration: 80s;
+            opacity: 0.6;
+        }
+
+        @keyframes floatWorship {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(8%, 6%);
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 1rem 6rem;
+        }
+
+        header img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 3px solid var(--accent);
+            box-shadow: 0 0 20px rgba(0, 255, 179, 0.45);
+            margin-bottom: 1rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        header p {
+            margin-top: 0.6rem;
+            font-size: 1rem;
+            font-style: italic;
+            color: var(--accent);
+        }
+
+        main {
+            max-width: 900px;
+            margin: -4.5rem auto 3rem;
+            padding: 0 1rem;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            padding: 2.6rem;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+            animation: fadeUp 1.3s ease;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            color: var(--accent);
+            margin-top: 2.2rem;
+        }
+
+        h3 {
+            margin-top: 1.5rem;
+            color: #cfcfcf;
+        }
+
+        p,
+        li {
+            color: var(--text);
+        }
+
+        ul {
+            padding-left: 1.4rem;
+        }
+
+        li {
+            margin-bottom: 0.6rem;
+        }
+
+        .meta {
+            font-size: 0.95rem;
+            color: var(--muted);
+            margin-bottom: 2rem;
+        }
+
+        .contact {
+            background: rgba(0, 255, 179, 0.08);
+            border: 1px solid rgba(0, 255, 179, 0.25);
+            padding: 1.6rem;
+            border-radius: 14px;
+            margin-top: 2rem;
+        }
+
+        .contact strong {
+            display: block;
+            margin-bottom: 0.6rem;
+            color: var(--accent);
+            font-size: 1.05rem;
+        }
+
+        .contact a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--muted);
+            padding: 2rem 1rem 3rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.7rem;
+            }
+
+            .card {
+                padding: 1.6rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="app_log.png" alt="EchoGrace Logo">
+        <h1>Privacy Policy for EchoGrace</h1>
+        <p>Where the Lord’s grace echoes</p>
+    </header>
+
+    <main>
+        <div class="card">
+
+            <p class="meta">
+                EchoGrace (“we”, “our”, or “us”) respects your privacy and is committed to protecting the personal
+                information of our users.
+                This Privacy Policy explains how information is collected, used, and safeguarded when you use EchoGrace
+                applications.
+            </p>
+
+            <h2>1. Information We Collect</h2>
+
+            <h3>1.1 Personal Information</h3>
+            <ul>
+                <li>Name or username</li>
+                <li>Email address</li>
+                <li>Phone number</li>
+                <li>Profile photo</li>
+                <li>Choir, church, or artist details (optional)</li>
+            </ul>
+
+            <h3>1.2 Authentication</h3>
+            <p>
+                EchoGrace uses <strong>Firebase Authentication</strong> to securely manage user accounts.
+                Login credentials are handled by Firebase and are not stored on our servers.
+            </p>
+
+            <h3>1.3 Usage & Analytics</h3>
+            <ul>
+                <li>App usage statistics</li>
+                <li>Crash and performance reports</li>
+                <li>Device and app version data</li>
+            </ul>
+
+            <h2>2. Data Security</h2>
+            <p>
+                We use industry-standard security measures to protect your information.
+                Data is stored securely using trusted cloud services.
+            </p>
+
+            <h2>3. Children’s Privacy</h2>
+            <p>
+                EchoGrace does not knowingly collect personal information from children under the age of 13.
+            </p>
+
+            <h2>4. Changes to This Policy</h2>
+            <p>
+                This Privacy Policy may be updated periodically. Continued use of EchoGrace indicates acceptance of any
+                changes.
+            </p>
+
+            <h2>5. Contact Us</h2>
+            <div class="contact">
+                <strong>EchoGrace – Adrich App Studio</strong>
+                <div>
+                    📧 Email:
+                    <a href="mailto:adrichappstudio@gmail.com">
+                        adrichappstudio@gmail.com
+                    </a>
+                </div>
+                <div>
+                    📞 Phone:
+                    <a href="tel:+256703252761">
+                        +256 703 252 761
+                    </a>
+                </div>
+                <div>🌍 Location: Adrich Street, Kapeeka</div>
+
+                <div>🌍 Country: Uganda</div>
+            </div>
+
+            <p style="margin-top: 2rem;">
+                <strong>By using EchoGrace, you agree to this Privacy Policy.</strong>
+            </p>
+
+        </div>
+    </main>
+
+    <footer>
+        © 2025 Adrich App Studio · EchoGrace
+    </footer>
+
+</body>
+
+</html>
